@@ -18,6 +18,7 @@ header{
 	min-height: 100px;
 	width: 100%;
 	color:#fff;
+	z-index: 5;
 }
 
 .container{
@@ -49,13 +50,15 @@ div.mobile-header{
 }
 
 .dsk-top-nav ul{
-	margin:0 auto;
+	margin: auto;
 	text-align: center;
+	padding: 20px;
 }
 
 .dsk-top-nav li{
 	display: inline;
 	padding: 8px 35px;
+	margin: 50px 0;
 	border-radius: 5%;
 }
 .dsk-top-nav li a{
@@ -71,6 +74,7 @@ div.mobile-header{
 .dropdown-content{
 	display: none;
 	position: fixed;
+	z-index: 5;
 	width: 100%;
 	top:60px;
 	background-color: #333;
@@ -84,6 +88,12 @@ div.mobile-header{
 
 .dropdown-content li{
 	padding: 5px 0;
+}
+
+
+.logo{
+	position: absolute;
+	width: 200px;
 }
 
 .logo span{
@@ -114,7 +124,9 @@ div.mobile-header{
 	font-size:1.5em;
 }
 .greeting button:hover{
-	background-color: green;
+	background-color: #32CD32;
+	border: 1px solid #32CD32;
+	transition: .6s;
 }
 
 .greeting button{
@@ -145,7 +157,7 @@ div.mobile-header{
 
 #showcase{
 	position: relative;
-	z-index: -1;
+	/*z-index: -1;*/
 	height:auto;
 	margin-top: -100px;
 	min-height: 700px;
@@ -184,6 +196,12 @@ div.mobile-header{
 
 #specials{
 	padding-top: 200px;
+	/*background-color: #ffffff;*/
+	background-color:#ffffff;
+	z-index: -3;
+/*background-image: url("https://www.transparenttextures.com/patterns/food.png");*/
+background-image: url("images/food.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .thumbnail{
@@ -232,12 +250,15 @@ div.mobile-header{
 
 /*Menu*/
 #menu{
-	background-color: #f0f0f0;
+	/*background-color: #f0f0f0;*/
+	background-color: #fffdd0;
+	background-image: url('images/restaurant_icons.png');
+	font-size:.8em;
 }
 
 #menu .section-header h1{
 	color:#fff;
-	width: 100px;
+	width: 150px;
 	background-color: #32CD32;
 	text-align:center;
 	margin:0 auto;
@@ -294,12 +315,15 @@ div.mobile-header{
 	height:auto;
 	width: 100%;
 	margin:0;
-	/*background-color: #32CD32;*/
 }
 
 .testimonial-image img{
 	max-width: 600px;
 	max-height: 400px;
+}
+
+.testimonial-content h4{
+	color:#FF1493;
 }
 
 
@@ -338,7 +362,7 @@ div.mobile-header{
 	background-position: center;
 	background-size: cover;
 	background-repeat:no-repeat;
-	background-attachment: fixed;
+	
 	
 }
 
@@ -353,9 +377,10 @@ div.mobile-header{
 
 .salutation-overlay{
 	position: absolute;
+	z-index: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(50,205,50,.5);
+	background-color: rgba(50,205,50,.7);
 }
 
 
@@ -371,6 +396,10 @@ footer{
 }
 
 footer h1{
+	margin:0;
+}
+
+footer p{
 	margin:0;
 }
 
