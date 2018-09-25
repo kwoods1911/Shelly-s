@@ -68,17 +68,22 @@ div.mobile-header{
 }
 
 .dsk-top-nav li a:hover{
+	transition: .6s;
 	background-color: #32CD32;
 }
 
 .dropdown-content{
-	display: none;
 	position: fixed;
+	display: hidden;
 	z-index: 5;
 	width: 100%;
 	top:60px;
 	background-color: #333;
 	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.dropdown-content ul{
+	padding-left: 0;
 }
 
 .dropdown-content li a{
@@ -87,12 +92,22 @@ div.mobile-header{
 }
 
 .dropdown-content li{
-	padding: 5px 0;
+	padding: 5px 15px;
+}
+
+.dropdown-content li:hover{
+	transition: .6s;
+	background-color: #FFFF00;
+}
+
+.dropdown-content a:hover{
+	color:#333;
 }
 
 
 .logo{
 	position: absolute;
+	top:8px;
 	width: 200px;
 }
 
@@ -121,8 +136,13 @@ div.mobile-header{
 
 
 .greeting h2{
-	font-size:1.5em;
+	font-size:1.2em;
 }
+
+.greeting h1{
+	font-size:2em;
+}
+
 .greeting button:hover{
 	background-color: #32CD32;
 	border: 1px solid #32CD32;
@@ -137,12 +157,16 @@ div.mobile-header{
 	padding: 1.5em;
 }
 
+.greeting a{
+	color:#fff;
+	text-decoration: none;
+}
+
 
 @media(min-width: 768px){
 	.mobile-header{
 		display: none;
 	}
-
 	.dropdown-content{
 		display: none;
 	}
@@ -150,9 +174,17 @@ div.mobile-header{
 	.dsk-top-nav{
 		display: block;
 	}
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
 #showcase{
@@ -202,6 +234,12 @@ div.mobile-header{
 /*background-image: url("https://www.transparenttextures.com/patterns/food.png");*/
 background-image: url("images/food.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+
+#specials h1{
+	font-size:2em;
+	margin:0;
 }
 
 .thumbnail{
@@ -265,6 +303,10 @@ background-image: url("images/food.png");
 	padding: 5px 15px;
 }
 
+.menu-list{
+	padding: 0px 10px;
+}
+
 .menu-list ul li{
 	list-style: none;
 	padding: 10px 5px;
@@ -324,6 +366,7 @@ background-image: url("images/food.png");
 
 .testimonial-content h4{
 	color:#FF1493;
+	font-size:1.5em;
 }
 
 
@@ -362,6 +405,7 @@ background-image: url("images/food.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat:no-repeat;
+	background-attachment: fixed;
 	
 	
 }
