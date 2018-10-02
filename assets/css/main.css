@@ -47,6 +47,7 @@ div.mobile-header{
 	height:70px;
 	border-bottom: 2px solid #FFFF00;
 	font-family: 'Gloria Hallelujah', cursive;
+	font-weight: 900;
 }
 
 .dsk-top-nav ul{
@@ -65,6 +66,7 @@ div.mobile-header{
 	color:#fff;
 	padding: 8px 25px;
 	text-decoration: none;
+	font-size:20px;
 }
 
 .dsk-top-nav li a:hover{
@@ -123,6 +125,7 @@ div.mobile-header{
 }
 
 .greeting{
+	font-weight: 900;
 	text-align: center;
 	position: absolute;
 	z-index: 4;
@@ -134,13 +137,14 @@ div.mobile-header{
 	color:#fff;
 }
 
-
-.greeting h2{
-	font-size:1.2em;
+.greeting h1{
+	font-size:3em;
+	margin:0;
 }
 
-.greeting h1{
-	font-size:2em;
+.greeting h2{
+	margin:0;
+	font-size:1.7em;
 }
 
 .greeting button:hover{
@@ -177,6 +181,25 @@ div.mobile-header{
 }
 
 
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
 
 
 
@@ -189,22 +212,104 @@ div.mobile-header{
 
 #showcase{
 	position: relative;
-	/*z-index: -1;*/
-	height:auto;
 	margin-top: -100px;
-	min-height: 700px;
+	height: 700px;
+	/*height:auto;*/
 	width: 100%;
-	background-image: url(images/showcase-image-2.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+.slides{
+	height:100%;
+}
+
+
+.slide{
+	position: relative;
+	height:100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+.slide1{
+		background-image: url(images/showcase-image-1.jpeg);
+}
+
+.slide2{
+		background-image: url(images/showcase-image-2.jpg);
+}
+
+.slide3{
+		background-image: url(images/showcase-image-7.jpeg);
+}
+
+.slide4{
+		background-image: url(images/showcase-image-4.jpeg);
+}
+
+
+.prev,.next{
+			position: absolute;
+			top:95%;
+			color:#fff;
+			font-weight:bold;
+			padding: 10px;
+			border-radius: 0 3px 3px 0;
+			z-index: 5;
+		}
+		.next{
+			border-radius:3px 0 0 3px;
+			right:39%;;
+			margin:auto;
+		}
+
+
+		.prev:hover,.next:hover{
+			background:rgba(0,0,0,0.8);
+			cursor:pointer;
+		}
+		.prev{
+			left:40%;
+			margin:auto;
+		}
+
+.selectSlide{
+	text-align: center;
+	right:50px;
+	bottom:60px;
+	position: absolute;
+	z-index: 4;
+
+}
+
+
+
+.active,.dots:hover{
+			background-color: #fff;
+}
+
+
+.dots{
+width:10px;
+height:10px;
+display: inline-block;
+background-color: #FF1493;
+padding:8px;
+margin:0 15px;
+border-radius:50%;
+cursor: pointer;
+}
+
 
 .overlay{
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	height: 100%;
 	width: 100%;
-	background:linear-gradient(90deg,rgba(255,105,180,.5),rgba(255,211,0,.5));
+	background:linear-gradient(90deg,rgba(255,105,180,.4),rgba(255,211,0,.3));
 }
 
 #showcase img{
@@ -303,6 +408,8 @@ background-image: url("images/food.png");
 	padding: 5px 15px;
 }
 
+
+
 .menu-list{
 	padding: 0px 10px;
 }
@@ -310,11 +417,45 @@ background-image: url("images/food.png");
 .menu-list ul li{
 	list-style: none;
 	padding: 10px 5px;
+	font-size:16px;
 }
 
 
 .menu-icon{
 	margin-right: 15px;
+}
+
+.menu-list h3{
+	font-size:1.3em;
+}
+
+
+/*Photo Gallery*/
+
+#photo-viewer{
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+}
+
+#photo-viewer.is-loading:after{
+	content: url(images/load.gif);
+	position: absolute;
+	top:0;
+	right: 0;
+}
+
+
+#photo-viewer img{
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	top:50%;
+	left:50%;
+}
+
+a.active{
+	opacity: 0.3;
 }
 
 
@@ -327,7 +468,7 @@ background-image: url("images/food.png");
 
 	.menu-items{
 		grid-column: 2/3;
-		padding: 0px 15px;
+		padding: 0px 0px;
 	}
 
 	.menu-image{

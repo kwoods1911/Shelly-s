@@ -23,8 +23,8 @@
 
 			<ul>
 			<li><a href="index.html">Home</a></li>
-			<li><a href="#menu">Menu</a></li>
 			<li><a href="#specials">Specials</a></li>
+			<li><a href="#menu">Menu</a></li>
 			<li><a href="#contact">Contact</a></li>
 			
 		</ul>
@@ -50,13 +50,76 @@
 
 		<div class="overlay"></div>
 
-			<img src="assets/css/images/soup1.png" alt="Hamburger Background" class="responsive">
+			<img src="assets/css/images/soup1.png" alt="Bowl of soup" class="responsive">
+			<a class="prev" onclick="plusIndex(-1)">&#10094;</a>
+		<a class="next" onclick="plusIndex(1)">&#10095;</a>
 
-		<div class="greeting">
+
+<div class="slides">
+
+	<div class="slide slide1 fade">
+		<div class="slide-content greeting">
+			<h1>Yes We Deliver  !</h1>
 			<h2>Call 1-242-812-2264 to place your order today.</h2>
-			<h1>Yes We Deliver!</h1>
 			<button><a href="#menu">View Menu</a></button>
 		</div>
+	</div>
+
+
+	<div class="slide slide2 fade">
+		<div class="slide-content greeting">
+			<h1>Get it while it's hot !</h1>
+			<h2>Call 1-242-812-2264 to place your order today.</h2>
+			<button><a href="#menu">View Menu</a></button>
+		</div>
+	</div>
+
+	<div class="slide slide3 fade">
+		<div class="slide-content greeting">
+			<h1>Place Your Order Today !</h1>
+			<h2>Call 1-242-812-2264 to place your order today.</h2>
+			<button><a href="#menu">View Menu</a></button>
+		</div>
+	</div>
+
+
+	<div class="slide slide4 fade">
+		<div class="slide-content greeting">
+			<h1>Sweet Deserts !</h1>
+			<h2>Call 1-242-812-2264 to place your order today.</h2>
+			<button><a href="#menu">View Menu</a></button>
+		</div>
+	</div>
+
+
+	</div>
+
+
+<div class="selectSlide" style="text-align: center;">
+		<span class="dots" onclick="currentSlide(1)"></span>
+		<span class="dots" onclick="currentSlide(2)"></span>
+		<span class="dots" onclick="currentSlide(3)"></span>
+		<span class="dots" onclick="currentSlide(4)"></span>
+	</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 	</section>
 
@@ -153,8 +216,20 @@
 					</div>
 
 					<div class="menu-image">
-						<img src="assets/css/images/menu-image.jpeg" alt="Freshly baked Desert" class="responsive">
+						<div id="photo-viewer"></div>
 						<h4> All meals are made with love !</h4>
+						<div id="thumbnails">
+		<a href="assets/css/images/photo-1.jpeg" class="thumb active" title ="burrito">
+		<img src="assets/css/images/thumb-1.jpeg" alt="burrito"/></a>
+		<a href="assets/css/images/photo-2.jpeg" class="thumb" title ="pancake">
+		<img src="assets/css/images/thumb-2.jpeg" alt="pancake"/></a>
+		<a href="assets/css/images/photo-3.jpeg" class="thumb" title ="salmon">
+		<img src="assets/css/images/thumb-3.jpeg" alt="salmon"/></a>
+		<a href="assets/css/images/photo-4.jpeg" class="thumb" title ="chocolate cake">
+		<img src="assets/css/images/thumb-4.jpeg" alt="chocolate cake"/></a>
+		<a href="assets/css/images/photo-5.jpeg" class="thumb" title ="soup">
+		<img src="assets/css/images/thumb-5.jpeg" alt="soup"/></a>
+	</div>
 					</div>
 
 
@@ -210,7 +285,7 @@
 
 				<div class="testimonial-content">
 					<h4>Kevin Ferguson</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Shelly's has the best food in Nassau. I literally order from her evey single day. I cannot get enough of it. She is very professional and delivers her food on time.</p>
 				</div>
 			</div>
 			
