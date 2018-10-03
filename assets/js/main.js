@@ -77,6 +77,11 @@ function autoSlide(){
 	slide[slideIndex-1].style.display = "block";
 	slideIndex++;
 	setTimeout(autoSlide,9000);
+  for(var i=0; i <dots.length; i++){
+    dots[i].className = dots[i].className.replace(" active","");
+  }
+
+  dots[slideIndex-2].className += " active";
 
 
 }

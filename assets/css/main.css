@@ -200,16 +200,6 @@ div.mobile-header{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 #showcase{
 	position: relative;
 	margin-top: -100px;
@@ -279,17 +269,12 @@ div.mobile-header{
 .selectSlide{
 	text-align: center;
 	right:50px;
-	bottom:60px;
+	bottom:125px;
 	position: absolute;
 	z-index: 4;
 
 }
 
-
-
-.active,.dots:hover{
-			background-color: #fff;
-}
 
 
 .dots{
@@ -300,7 +285,15 @@ background-color: #FF1493;
 padding:8px;
 margin:0 15px;
 border-radius:50%;
+border:1.5px solid #FF1493;
 cursor: pointer;
+}
+.active{
+	transition: 1s;
+	background-color: #fff;
+}
+.active, .dots:hover{
+	background-color: #fff;
 }
 
 
@@ -399,6 +392,10 @@ background-image: url("images/food.png");
 	font-size:.8em;
 }
 
+#menu .section-header{
+	padding: 100px 0;
+}
+
 #menu .section-header h1{
 	color:#fff;
 	width: 150px;
@@ -456,6 +453,7 @@ background-image: url("images/food.png");
 
 a.active{
 	opacity: 0.3;
+
 }
 
 
@@ -476,6 +474,29 @@ a.active{
 		grid-row: 1/2;
 		padding: 0px 15px;
 	}
+	.menu-grid{
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: (1fr)[2];
+		    grid-template-columns: repeat(2,1fr);
+	}
+
+	.menu-items{
+		-ms-grid-column: 2;
+		-ms-grid-column-span: 1;
+		grid-column: 2/3;
+		padding: 0px 0px;
+	}
+
+	.menu-image{
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 1;
+		grid-column: 1/2;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 1;
+		grid-row: 1/2;
+		padding: 0px 15px;
+	}
 }
 
 
@@ -488,6 +509,7 @@ a.active{
 	.menu-items ul{
 		padding-left: 5px;
 	}
+
 }
 
 
