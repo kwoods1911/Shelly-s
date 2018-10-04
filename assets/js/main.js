@@ -118,11 +118,12 @@ $(document).on('click', '.thumb', function(e){ // When a thumb is clicked on
   var $img,                               // Create local variable called $img
       src = this.href;                    // Store path to image
       request = src;                      // Store latest image request
-  
+  var test;
   e.preventDefault();                     // Stop default link behavior
   
   $thumbs.removeClass('active');          // Remove active from all thumbs
   $(this).addClass('active');             // Add active to clicked thumb
+ 
 
   if (cache.hasOwnProperty(src)) {        // If cache contains this image
     if (cache[src].isLoading === false) { // And if isLoading is false
@@ -148,11 +149,13 @@ $(document).on('click', '.thumb', function(e){ // When a thumb is clicked on
     });
 
     $frame.addClass('is-loading');        // Add is-loading class to frame
-
     $img.attr({                           // Set attributes on <img> element
       'src': src,                         // Add src attribute to load image
       'alt': this.title || ''             // Add title if one was given in link
     });
+
+
+  
 
   }
 
@@ -162,3 +165,46 @@ $(document).on('click', '.thumb', function(e){ // When a thumb is clicked on
 $('.thumb').eq(0).click();                // Simulate click on first thumb
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Hover over thumbnail and display item
+// Selecting Image Div and img tag
+var imagesContainer = $('.thumb-container');
+var imgElement = $('.thumb-container img');
+
+// On hover display description of 
+imagesContainer.hover(
+      function(){$(this).find('p:first').slideToggle(800,'swing');},
+      function(){$(this).find('p:first').fadeOut(800);}
+      );
+
+
+
+// On hover display border around menu item.
+imgElement.hover(function(){
+  $(this).animate({borderTopColor:" rgba(255,124,124,1)",
+    borderBottomColor:"rgba(255,124,124,1)",
+    borderRightColor:'rgba(255,124,124,1)',
+    borderLeftColor:'rgba(255,124,124,1)'},
+    '5000');
+}, function(){
+  $(this).animate({borderTopColor:'none',
+    borderBottomColor:'none',
+    borderRightColor:'none',
+    borderLeftColor:'none'},
+    '5000');
+});

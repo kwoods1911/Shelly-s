@@ -172,7 +172,7 @@ div.mobile-header{
 		display: none;
 	}
 	.dropdown-content{
-		display: none;
+		opacity: 0;
 	}
 
 	.dsk-top-nav{
@@ -340,6 +340,21 @@ background-image: url("images/food.png");
 	margin:0;
 }
 
+.thumb-container{
+	display: inline-block;
+}
+
+.thumb-container a{
+	color:none;
+}
+
+
+.thumb-container img{
+	border:2px solid rgba(255,124,124,0);
+}
+
+
+
 .thumbnail{
 	padding: 40px 10px;
 	max-width: 200px;
@@ -355,7 +370,21 @@ background-image: url("images/food.png");
 	max-height: 150px;
 	max-width: 200px;
 }
+.thumb{
+	position: relative;
+}
 
+.thumb p{
+	display:none;
+	position: absolute;
+	z-index: 0;
+	left:0;
+	right:0;
+	margin: 0 auto;
+	color:#FF1493;
+	font-size: 20px;
+	margin:0 auto;
+}
 .section-header{
 	text-align: center;
 	padding: 20px 0;
@@ -453,10 +482,7 @@ background-image: url("images/food.png");
 
 a.active{
 	opacity: 0.3;
-
 }
-
-
 
 @media(min-width: 768px){
 	.menu-grid{
